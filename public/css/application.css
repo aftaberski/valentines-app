@@ -46,6 +46,7 @@ a:hover {
 
 .logo {
   height: 2em;
+  padding: 5px;
 }
 
 code {
@@ -72,3 +73,21 @@ code {
  #signup_form {
     display:none;
  }
+
+ header {
+    text-align: center;
+ }
+
+ .header-item {
+    height: 2em;
+    display: inline;
+    padding: 3px;
+ }
+
+ #header-title {
+    border: solid #FF6CB5 4px;
+ }
+
+.heart {
+    width: 2em;
+}
