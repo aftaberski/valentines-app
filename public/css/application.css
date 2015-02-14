@@ -65,3 +65,10 @@ code {
     margin-left: -1em;
     overflow: auto;
 }
+ #login_form {
+    display:none;
+ }
+
+ #signup_form {
+    display:none;
+ }
