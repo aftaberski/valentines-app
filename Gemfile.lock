@@ -85,7 +85,7 @@ DEPENDENCIES
   bcrypt-ruby
   capybara
   factory_girl
-  faker (~> 1.4.3)
+  faker (~> 1.4.3q)
   pg
   rack-test
   rake
