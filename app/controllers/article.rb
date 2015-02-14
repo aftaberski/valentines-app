@@ -1,7 +1,11 @@
 # SHOW ALL article titles
 get '/articles/all' do
-  @articles = Article.all
-  erb :'articles/show'
+  if current_user
+    @articles = Article.all
+    erb :'articles/show'
+  else
+    redirect '/'
+  end
 end
 
 

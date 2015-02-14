@@ -91,3 +91,7 @@ code {
 .heart {
     width: 2em;
 }
+
+.article-photo {
+    width: 200px;
+}
