@@ -11,9 +11,9 @@ post '/login' do
 
   if user.try(:authenticate, params[:user][:password])
     session[:user_id] = user.id
-    redirect '/'
+    erb :'welcome', layout: false
   else
-    redirect '/login'
+    erb :'auth/login', layout: false
   end
 end
 
@@ -31,8 +31,8 @@ post '/signup' do
 
   if user.save
     session[:user_id] = user.id
-    redirect "/"
+    erb :'welcome', layout: false
   else
-    redirect "/signup"
+    erb :'auth/signup', layout: false
   end
 end

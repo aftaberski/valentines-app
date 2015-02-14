@@ -8,6 +8,7 @@
         <a class="welcome-signup" href="/signup">Signup</a>
         <a style="display:none" class="welcome-logout" href="/logout">Logout</a>
       <% end %>
-
-<%= erb :'auth/login' %>
-<%= erb :'auth/signup' %>
+<div class="auth-toggle">
+  <%= erb :'auth/login' %>
+  <%= erb :'auth/signup' %>
+</div>
