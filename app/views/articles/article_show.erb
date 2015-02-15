@@ -1,6 +1,6 @@
 <h1><%= @article.title %></h1>
 <h3>Posted by: <%= @user %></h3>
-<img class="article-photo" src="<%= article.photo %>"/>
+<img class="article-photo" src="<%= @article.photo %>"/>
 <p><%= @article.content %></p>
 <% if current_user == @article.user %>
   <button><a href="/articles/<%= @article.id%>/update">Update</a></button>

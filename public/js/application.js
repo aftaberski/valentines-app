@@ -46,19 +46,37 @@ $(document).ready(function() {
 
 $('a img.heart').on("click", function(event){
     event.preventDefault();
-    console.log(event);
+    // console.log(event);
     var $target = $(event.target)
     // debugger
+
     $.ajax({
       type: $target.data("method"),
       url: $target.data("action"),
       data: $target.data(),
       success: function(response){
+        console.log("in success")
         console.log(response)
-        $('#' + $target.data("article_id")).empty();
-        $('#' + $target.data("article_id")).append(response);
-        // $('.welcome-login').toggle();
-        // $('.welcome-signup').toggle();
+        console.log("target",$target)
+        console.log($('#' + $target.data('article_id')))
+        $('#' + $target.data('article_id')).empty();
+        $('#' + $target.data('article_id')).append(response);
+        // $('body').empty();
+        // $('body').append(response);
+      }
+    });
+  });
+
+$('a#show-articles-btn').on("click", function(event){
+    event.preventDefault();
+    var $target = $(event.currentTarget)
+    // debugger
+    $.ajax({
+      type: "GET",
+      url: $target.attr('href'),
+      success: function(response){
+        console.log(response)
+        $('#content').append(response);
       }
     });
   });

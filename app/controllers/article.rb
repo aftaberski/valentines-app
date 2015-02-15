@@ -2,9 +2,9 @@
 get '/articles/all' do
   if current_user
     @articles = Article.all
-    erb :'articles/show'
-  else
-    redirect '/'
+    if request.xhr?
+      erb :'articles/show', layout: false
+    end
   end
 end
 

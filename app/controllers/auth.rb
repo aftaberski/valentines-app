@@ -1,4 +1,5 @@
 get '/' do
+  # @articles = Article.all
   erb :welcome
 end
 

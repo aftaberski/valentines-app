@@ -74,6 +74,10 @@ code {
     display:none;
  }
 
+#new_article_form {
+    display: none;
+}
+
  header {
     text-align: center;
  }
