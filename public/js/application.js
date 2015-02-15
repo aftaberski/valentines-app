@@ -82,4 +82,9 @@ $('a#show-articles-btn').on("click", function(event){
       }
     });
   });
+
+$('.add-new-couple-btn').on("click", function(event){
+    event.preventDefault();
+    $('#new_article_form').toggle();
+  });
 });

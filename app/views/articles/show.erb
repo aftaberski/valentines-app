@@ -2,8 +2,10 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
   <% if current_user %>
-    <button><a href="/articles/new">Add A New Couple</a></button>
+    <button><a class="add-new-couple-btn" href="/articles/new">Add A New Couple</a></button>
   <% end %>
+
+  <%= erb :'articles/new' %>
 
   <% @articles.each do |article| %>
     <h1><a href="/articles/<%= article.id %>" ><%= article.title %></a></h1>
