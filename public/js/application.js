@@ -78,6 +78,7 @@ $('a#show-articles-btn').on("click", function(event){
       url: $target.attr('href'),
       success: function(response){
         console.log(response)
+        $('#content').empty();
         $('#content').append(response);
       }
     });
