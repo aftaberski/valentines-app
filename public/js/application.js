@@ -2,6 +2,7 @@ $(document).ready(function() {
 
   $('.welcome-login').on("click", function(event){
     event.preventDefault();
+    $('#signup_form').hide();
     $('#login_form').toggle();
   });
 
@@ -24,6 +25,7 @@ $(document).ready(function() {
 
    $('.welcome-signup').on("click", function(event){
     event.preventDefault();
+    $('#login_form').hide();
     $('#signup_form').toggle();
   });
 
