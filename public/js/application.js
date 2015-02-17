@@ -19,6 +19,9 @@ $(document).ready(function() {
         $('#content').append(response);
         // $('.welcome-login').toggle();
         // $('.welcome-signup').toggle();
+      },
+      error: function(response){
+        errorMod.show("Username or Password is Incorrect")
       }
     });
   });

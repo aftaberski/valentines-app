@@ -14,7 +14,8 @@ post '/login' do
     session[:user_id] = user.id
     erb :'welcome', layout: false
   else
-    erb :'auth/login', layout: false
+    # erb :'auth/login', layout: false
+    return 402
   end
 end
 

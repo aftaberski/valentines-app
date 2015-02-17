@@ -99,3 +99,9 @@ code {
 .article-photo {
     width: 200px;
 }
+
+.error {
+    display: none;
+    background-color: red;
+    color: white;
+}
