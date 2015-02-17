@@ -75,7 +75,7 @@ $('a img.heart').on("click", function(event){
 $('a#show-articles-btn').on("click", function(event){
     event.preventDefault();
     var $target = $(event.currentTarget)
-    // debugger
+    debugger
     $.ajax({
       type: "GET",
       url: $target.attr('href'),

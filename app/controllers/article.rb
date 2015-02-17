@@ -19,13 +19,14 @@ get '/articles/new' do
 end
 
 post '/articles/new' do
+
   params[:article][:user_id]=current_user.id
   article = Article.create(params[:article])
 
   if article.save
     @article = article
     @user = User.find(article.user_id).name
-    erb :'/articles/article_show'
+    redirect "/articles/#{article.id}"
   end
 end
 
